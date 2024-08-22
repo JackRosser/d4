@@ -119,12 +119,32 @@ console.log(reverseWord);
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-// Questo non ho idea di come farlo
+let upperFirst = function (str) {
+  let s = str.split(" "); //crea un array splittando ogni parola della stringa
+  str - "";
+  for (let i = 0; i < s.lenght; i++) {
+    s[i] = s[i][0].toUpperCase() + s[i].substring(1, s[s.length]);
+    if (i === s.length - 1) str += s[i];
+    else str += s[i] + " ";
+  }
+  return str;
+};
+
+let upper = upperFirst("questa è una frase molto lunga");
+console.log(upper);
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
+
+let cutString = function (str) {
+  return str.substring(1, str.length - 1); // con il metodo substring prendo una porzione di stringa,poi gli dico di prendere la pos1, scorrere tutta la length e -1 per l'ultima lettera
+};
+
+console.log(cutString("geologo"));
+console.log(cutString("avvoltoio"));
+console.log(cutString("rinoceronte"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
