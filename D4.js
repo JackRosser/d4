@@ -43,13 +43,28 @@ let crazyDiff = function (n) {
   }
 };
 
-console.log(`Se il numero fornito è minore di 19 ${crazyDiff(16)}`);
-console.log(`Se il numero fornito è maggiore di 19 ${crazyDiff(22)}`);
+console.log(`Se il numero fornito è minore di 19: ${crazyDiff(16)}`);
+console.log(`Se il numero fornito è maggiore di 19: ${crazyDiff(22)}`);
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
+
+let boundary = function (n = 0) {
+  if ((n > 20 && n <= 100) || n === 400) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(`Se il numero fornito è maggiore di 20: ${boundary(45)}`);
+console.log(`Se il numero fornito è minore di 100: ${boundary(97)}`);
+console.log(`Se il numero fornito è uguale a 100: ${boundary(100)}`);
+console.log(`Se il numero fornito è 400: ${boundary(400)}`);
+console.log(`Se il numero fornito è minore di 20: ${boundary(16)}`);
+console.log(`Se il numero fornito è 874: ${boundary(874)}`);
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
