@@ -122,7 +122,7 @@ console.log(reverseWord);
 let upperFirst = function (str) {
   let s = str.split(" "); //crea un array splittando ogni parola della stringa
   str - "";
-  for (let i = 0; i < s.lenght; i++) {
+  for (let i = 0; i < s.length; i++) {
     s[i] = s[i][0].toUpperCase() + s[i].substring(1, s[s.length]);
     if (i === s.length - 1) str += s[i];
     else str += s[i] + " ";
