@@ -72,10 +72,36 @@ console.log(`Se il numero fornito è 874: ${boundary(874)}`);
  ritornare la stringa originale senza alterarla.
 */
 
+function epify(testo) {
+  if (testo.startsWith("EPICODE")) {
+    // .startsWith verifica se la stringa testo inizia con la sottostringa specificata, in questo caso "EPICODE".
+    return testo;
+  } else {
+    return "EPICODE " + testo;
+  }
+}
+
+console.log(epify("mi farà diventare ricco"), "esempio senza una parola iniziale");
+console.log(epify("EPICODE è una scuola"));
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
+
+let check3and7 = function (num) {
+  if (num % 7 === 0) {
+    return "Il numero è un multiplo di 7";
+  } else if (num % 3 === 0) {
+    return "Il numero è un multiplo di 3";
+  } else {
+    return "Il numero non è un multiplo di 3 o di 7";
+  }
+};
+
+console.log(`Se il numero scelto è 49: ${check3and7(49)}`);
+console.log(`Se il numero scelto è 15: ${check3and7(15)}`);
+console.log(`Se il numero scelto è 25: ${check3and7(25)}`);
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
