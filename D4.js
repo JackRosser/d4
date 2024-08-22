@@ -107,10 +107,19 @@ console.log(`Se il numero scelto è 25: ${check3and7(25)}`);
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
+let reverseString = function (testo) {
+  return testo.split("").reverse().join(""); //split divide ogni lettera e trasforma la stringa in un array, reverse le inverte, joi fa il contrario di split
+};
+
+let reverseWord = reverseString("EPICODE");
+console.log(reverseWord);
+
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
+
+// Questo non ho idea di come farlo
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
