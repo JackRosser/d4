@@ -32,6 +32,20 @@ console.log("In questo caso i numeri sono diversi: ", crazySum(78, 125));
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
+let crazyDiff = function (n) {
+  let result = n - 19;
+  let absResult = Math.abs(result); //il metodo Math.abs restituisce il valore assoluto, quindi non negativo (non -15 ma 15 nel caso di 5-20)
+  switch (true) {
+    case n > 19:
+      return absResult * 3;
+    default:
+      return absResult;
+  }
+};
+
+console.log(`Se il numero fornito è minore di 19 ${crazyDiff(16)}`);
+console.log(`Se il numero fornito è maggiore di 19 ${crazyDiff(22)}`);
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
